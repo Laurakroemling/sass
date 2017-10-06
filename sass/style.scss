@@ -1,0 +1,80 @@
+@import "reset";
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+@mixin size($size) {
+width: $size;
+height: $size;
+}
+
+$base-color: #4792a2 ;
+$base-size: 300px;
+
+body{
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  height: 100vh;
+
+}
+
+%color-card{
+width: $base-size;
+height: $base-size;
+  background:  $base-color;
+
+  display: flex;
+	align-items: center;
+	justify-content: center;
+
+text-align: center;
+font-family: 'Source Sans Pro', sans-serif;
+color: #FFF;
+
+}
+
+.lighter{
+  @extend %color-card;
+  @include size($base-size*1);
+  background: lighten($base-color, 30%);
+  &:after{
+    content: "("+lighten($base-color, 30%)+")";
+}
+}
+
+.light{
+  @extend %color-card;
+  @include size($base-size*1.1);
+  background: lighten($base-color, 20%);
+  &:after{
+    content: "("+lighten($base-color, 20%)+")";
+}
+}
+.base{
+  @extend %color-card;
+  @include size($base-size*1.2);
+  &:after{
+    content: "("+$base-color+")";
+  }
+}
+
+.dark{
+  @extend %color-card;
+  @include size($base-size*1.1);
+    background: darken($base-color,
+  20%);
+  &:after{
+    content: "("+darken($base-color,
+  20%)+")";
+}
+}
+.darker{
+  @extend %color-card;
+  @include size($base-size*1);
+  background: darken($base-color,
+30%);
+&:after{
+  content: "("+darken($base-color,
+30%)+")";
+}
+}

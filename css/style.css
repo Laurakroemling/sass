@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+html, body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; }
+
+.lighter, .light, .base, .dark, .darker {
+  width: 300px;
+  height: 300px;
+  background: #4792a2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #FFF; }
+
+.lighter {
+  width: 300px;
+  height: 300px;
+  background: #a9d1d9; }
+  .lighter:after {
+    content: "(#a9d1d9)"; }
+
+.light {
+  width: 330px;
+  height: 330px;
+  background: #85beca; }
+  .light:after {
+    content: "(#85beca)"; }
+
+.base {
+  width: 360px;
+  height: 360px; }
+  .base:after {
+    content: "(#4792a2)"; }
+
+.dark {
+  width: 330px;
+  height: 330px;
+  background: #28525b; }
+  .dark:after {
+    content: "(#28525b)"; }
+
+.darker {
+  width: 300px;
+  height: 300px;
+  background: #183238; }
+  .darker:after {
+    content: "(#183238)"; }
+
+/*# sourceMappingURL=style.css.map */
